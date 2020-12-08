@@ -2,7 +2,7 @@ import { createResponse } from 'node-mocks-http';
 import { ValidationErrorResponse } from './ValidationErrorResponse';
 
 describe('api > errors > ValidationErrorResponse', () => {
-  it('should return a valid valiation error response', () => {
+  it('should return a valid validation error response', () => {
     const res = createResponse();
 
     // @ts-ignore

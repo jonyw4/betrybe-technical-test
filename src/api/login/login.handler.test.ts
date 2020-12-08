@@ -26,6 +26,6 @@ describe('api > login > handler', () => {
     // @ts-ignore
     loginHandler(req, res);
     expect(res._getStatusCode()).toBe(400);
-    expect(res._getJSONData().message.length).toBe('Campos inválidos');
+    expect(res._getJSONData().message).toBe('Campos inválidos');
   });
 });

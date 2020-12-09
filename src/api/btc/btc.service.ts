@@ -60,4 +60,7 @@ export class BtcService {
       }
     };
   }
+  public async updateCurrency(currency: Currencies, value: number) {
+    return this.currenciesService.updateCurrencyExchange(currency, value);
+  }
 }

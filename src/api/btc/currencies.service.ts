@@ -1,12 +1,35 @@
 import { Currencies, CurrenciesExchanges } from './types';
-import currenciesExchanges from './currencies.json';
+import fs from 'fs';
+import path from 'path';
+
+const FILE_PATH = 'currencies.json';
 
 export class CurrenciesService {
-  public getCurrencies(): Currencies[] {
+  public async getCurrencies(): Promise<Currencies[]> {
+    const currenciesExchanges = await this.getCurrenciesExchanges();
     return Object.keys(currenciesExchanges).map((c) => c as Currencies);
   }
-  public getCurrenciesExchanges(): CurrenciesExchanges {
-    return currenciesExchanges;
+  public async getCurrenciesExchanges(): Promise<CurrenciesExchanges> {
+    const data = await fs.promises.readFile(
+      path.resolve(__dirname, FILE_PATH),
+      'utf8'
+    );
+    return JSON.parse(data.toString());
   }
-  // public updateCurrencyExchange(currency: Currencies, value: number): boolean {}
+  public async updateCurrencyExchange(
+    currency: Currencies,
+    value: number
+  ): Promise<boolean> {
+    const currenciesExchanges = await this.getCurrenciesExchanges();
+    const data = { ...currenciesExchanges, [currency]: String(value) };
+    try {
+      await fs.promises.writeFile(
+        path.resolve(__dirname, FILE_PATH),
+        JSON.stringify(data)
+      );
+      return true;
+    } catch {
+      return false;
+    }
+  }
 }

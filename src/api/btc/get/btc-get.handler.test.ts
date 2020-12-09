@@ -1,5 +1,5 @@
 import { createMocks } from 'node-mocks-http';
-import { btcHandler } from '.';
+import { btcGetHandler } from '.';
 
 describe('api > btc > get > handler', () => {
   it('should try to get bitcoin values and return with success', async () => {
@@ -7,7 +7,7 @@ describe('api > btc > get > handler', () => {
       method: 'GET'
     });
     // @ts-ignore
-    await btcHandler(req, res);
+    await btcGetHandler(req, res);
     expect(res._getStatusCode()).toBe(200);
     expect(res._getJSONData().disclaimer).toBeDefined();
   });

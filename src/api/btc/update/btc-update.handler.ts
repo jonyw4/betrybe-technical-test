@@ -24,5 +24,9 @@ export const btcUpdateHandler: NextApiHandler = async (req, res) => {
     data.currency,
     data.value
   );
-  jsonResponse(res, 200, response);
+  if (response) {
+    jsonResponse(res, 200, { message: response });
+  } else {
+    jsonResponse(res, 500, { message: 'Erro interno' });
+  }
 };

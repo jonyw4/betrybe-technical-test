@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>LoginService | betrybe-technical-test</title>
+	<title>ValidationHandler | betrybe-technical-test</title>
 	<meta name="description" content="Documentation for betrybe-technical-test">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,21 +56,37 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="loginservice.html">LoginService</a>
+					<a href="validationhandler.html">ValidationHandler</a>
 				</li>
 			</ul>
-			<h1>Class LoginService</h1>
+			<h1>Class ValidationHandler&lt;T&gt;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>T</h4>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">LoginService</span>
+						<span class="target">ValidationHandler</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<a href="loginemailvalidationhandler.html" class="tsd-signature-type">LoginEmailValidationHandler</a>
+							</li>
+							<li>
+								<a href="loginpasswordvalidationhandler.html" class="tsd-signature-type">LoginPasswordValidationHandler</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -79,71 +95,81 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="validationhandler.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-private-protected">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="validationhandler.html#data" class="tsd-kind-icon">data</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="loginservice.html#generatetoken" class="tsd-kind-icon">generate<wbr>Token</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="loginservice.html#login" class="tsd-kind-icon">login</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="validationhandler.html#handle" class="tsd-kind-icon">handle</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-					<a name="generatetoken" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> generate<wbr>Token</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">generate<wbr>Token<span class="tsd-signature-symbol">(</span>email<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Validation<wbr>Handler<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="validationhandler.html" class="tsd-signature-type">ValidationHandler</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/fa14ec5/src/api/login/login.service.ts#L8">api/login/login.service.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/fa14ec5/src/api/validation.ts#L1">api/validation.ts:1</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Token de 16 caracteres, contendo letras e números aleatórios</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>email: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>password: <span class="tsd-signature-type">string</span></h5>
+									<h5>data: <span class="tsd-signature-type">T</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="validationhandler.html" class="tsd-signature-type">ValidationHandler</a></h4>
 						</li>
 					</ul>
 				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-private-protected">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="data" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> data</h3>
+					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/fa14ec5/src/api/validation.ts#L2">api/validation.ts:2</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="login" class="tsd-anchor"></a>
-					<h3>login</h3>
+					<a name="handle" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> handle</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">login<span class="tsd-signature-symbol">(</span>email<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/loginresponsedata.html" class="tsd-signature-type">LoginResponseData</a></li>
+						<li class="tsd-signature tsd-kind-icon">handle<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/fa14ec5/src/api/login/login.service.ts#L11">api/login/login.service.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/fa14ec5/src/api/validation.ts#L3">api/validation.ts:3</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>email: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>password: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/loginresponsedata.html" class="tsd-signature-type">LoginResponseData</a></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -174,30 +200,33 @@
 					<li class=" tsd-kind-class">
 						<a href="loginpasswordvalidationhandler.html" class="tsd-kind-icon">Login<wbr>Password<wbr>Validation<wbr>Handler</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-class">
+					<li class=" tsd-kind-class">
 						<a href="loginservice.html" class="tsd-kind-icon">Login<wbr>Service</a>
-						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-								<a href="loginservice.html#generatetoken" class="tsd-kind-icon">generate<wbr>Token</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="loginservice.html#login" class="tsd-kind-icon">login</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="loginvalidator.html" class="tsd-kind-icon">Login<wbr>Validator</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="validationerrorresponse.html" class="tsd-kind-icon">Validation<wbr>Error<wbr>Response</a>
 					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-has-type-parameter">
 						<a href="validationhandler.html" class="tsd-kind-icon">Validation<wbr>Handler</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="validationhandler.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="validationhandler.html#data" class="tsd-kind-icon">data</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="validationhandler.html#handle" class="tsd-kind-icon">handle</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="validator.html" class="tsd-kind-icon">Validator</a>
 					</li>

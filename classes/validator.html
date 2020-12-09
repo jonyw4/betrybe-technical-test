@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Validation | betrybe-technical-test</title>
+	<title>Validator | betrybe-technical-test</title>
 	<meta name="description" content="Documentation for betrybe-technical-test">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="validation.html">Validation</a>
+					<a href="validator.html">Validator</a>
 				</li>
 			</ul>
-			<h1>Class Validation&lt;T&gt;</h1>
+			<h1>Class Validator&lt;T&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -78,10 +78,10 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Validation</span>
+						<span class="target">Validator</span>
 						<ul class="tsd-hierarchy">
 							<li>
-								<a href="loginvalidation.html" class="tsd-signature-type">LoginValidation</a>
+								<a href="loginvalidator.html" class="tsd-signature-type">LoginValidator</a>
 							</li>
 						</ul>
 					</li>
@@ -94,19 +94,20 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="validation.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="validator.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="validation.html#data" class="tsd-kind-icon">data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="validator.html#data" class="tsd-kind-icon">data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="validator.html#handlers" class="tsd-kind-icon">handlers</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="validation.html#validate" class="tsd-kind-icon">validate</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="validator.html#validate" class="tsd-kind-icon">validate</a></li>
 							</ul>
 						</section>
 					</div>
@@ -118,13 +119,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Validation<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="validation.html" class="tsd-signature-type">Validation</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Validator<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, handlers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="validator.html" class="tsd-signature-type">Validator</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/317579d/src/api/validation.ts#L1">api/validation.ts:1</a></li>
+									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/fa14ec5/src/api/validation.ts#L17">api/validation.ts:17</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -132,8 +133,11 @@
 								<li>
 									<h5>data: <span class="tsd-signature-type">T</span></h5>
 								</li>
+								<li>
+									<h5>handlers: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="validation.html" class="tsd-signature-type">Validation</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="validator.html" class="tsd-signature-type">Validator</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -146,7 +150,17 @@
 					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/317579d/src/api/validation.ts#L2">api/validation.ts:2</a></li>
+							<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/fa14ec5/src/api/validation.ts#L19">api/validation.ts:19</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="handlers" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> handlers</h3>
+					<div class="tsd-signature tsd-kind-icon">handlers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/fa14ec5/src/api/validation.ts#L20">api/validation.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -155,18 +169,18 @@
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="validate" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> validate</h3>
+					<h3>validate</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">validate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">validate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../globals.html#validationresponse" class="tsd-signature-type">ValidationResponse</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/317579d/src/api/validation.ts#L3">api/validation.ts:3</a></li>
+									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/fa14ec5/src/api/validation.ts#L22">api/validation.ts:22</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../globals.html#validationresponse" class="tsd-signature-type">ValidationResponse</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -192,32 +206,44 @@
 						<a href="errorresponse.html" class="tsd-kind-icon">Error<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="loginemailvalidationhandler.html" class="tsd-kind-icon">Login<wbr>Email<wbr>Validation<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="loginpasswordvalidationhandler.html" class="tsd-kind-icon">Login<wbr>Password<wbr>Validation<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="loginservice.html" class="tsd-kind-icon">Login<wbr>Service</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="loginvalidation.html" class="tsd-kind-icon">Login<wbr>Validation</a>
+						<a href="loginvalidator.html" class="tsd-kind-icon">Login<wbr>Validator</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="validationerrorresponse.html" class="tsd-kind-icon">Validation<wbr>Error<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="validationhandler.html" class="tsd-kind-icon">Validation<wbr>Handler</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-has-type-parameter">
-						<a href="validation.html" class="tsd-kind-icon">Validation</a>
+						<a href="validator.html" class="tsd-kind-icon">Validator</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="validation.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="validator.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
-								<a href="validation.html#data" class="tsd-kind-icon">data</a>
+								<a href="validator.html#data" class="tsd-kind-icon">data</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="validator.html#handlers" class="tsd-kind-icon">handlers</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="validation.html#validate" class="tsd-kind-icon">validate</a>
+								<a href="validator.html#validate" class="tsd-kind-icon">validate</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class">
-						<a href="validationerrorresponse.html" class="tsd-kind-icon">Validation<wbr>Error<wbr>Response</a>
-					</li>
 					<li class=" tsd-kind-interface">
 						<a href="../interfaces/bpi.html" class="tsd-kind-icon">BPI</a>
 					</li>
@@ -239,6 +265,12 @@
 					<li class=" tsd-kind-interface">
 						<a href="../interfaces/loginresponsedata.html" class="tsd-kind-icon">Login<wbr>Response<wbr>Data</a>
 					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/validationresponseerror.html" class="tsd-kind-icon">Validation<wbr>Response<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/validationresponsesuccess.html" class="tsd-kind-icon">Validation<wbr>Response<wbr>Success</a>
+					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#allbpi" class="tsd-kind-icon">AllBPI</a>
 					</li>
@@ -250,6 +282,9 @@
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#validationerrorcontent" class="tsd-kind-icon">Validation<wbr>Error<wbr>Content</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#validationresponse" class="tsd-kind-icon">Validation<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="../globals.html#endpoint" class="tsd-kind-icon">ENDPOINT</a>
@@ -280,14 +315,15 @@
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+			</ul>
+			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>

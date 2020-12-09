@@ -14,6 +14,9 @@ describe('api > btc > handler', () => {
   it('should try to update bitcoin values and return with success', async () => {
     const { req, res } = createMocks({
       method: 'POST',
+      headers: {
+        authorization: '0000000000000000'
+      },
       body: {
         currency: 'BRL',
         value: 6

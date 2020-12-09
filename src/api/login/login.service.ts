@@ -8,6 +8,9 @@ export class LoginService {
   private generateToken(email: string, password: string) {
     return crypto.randomBytes(8).toString('hex');
   }
+  public static checkToken(token: string): boolean {
+    return token.length === 16;
+  }
   public login(email: string, password: string): LoginResponseData {
     return {
       token: this.generateToken(email, password)

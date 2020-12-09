@@ -5,9 +5,9 @@ import { methodNotAllowedResponse } from '../utils';
 
 export const btcHandler: NextApiHandler = async (req, res) => {
   if (req.method === 'POST') {
-    btcUpdateHandler(req, res);
+    await btcUpdateHandler(req, res);
   } else if (req.method === 'GET') {
-    btcGetHandler(req, res);
+    await btcGetHandler(req, res);
   } else {
     methodNotAllowedResponse(['POST', 'GET'], req, res);
   }

@@ -1,16 +1,22 @@
 /* eslint-disable no-useless-escape */
-import { Validation } from '../validation';
+import { ValidationHandler, Validator } from '../validation';
 import { LoginRequestData } from './login.types';
 
-export class LoginValidation extends Validation<LoginRequestData> {
-  private validatePassword(): boolean {
-    return this.data.password.length >= 6;
-  }
-  private validateEmail(): boolean {
+class LoginEmailValidationHandler extends ValidationHandler<LoginRequestData> {
+  public async handle() {
     const filter = /^([a-zA-Z0-9_\.\-])+\@([a-zA-Z0-9_\.\-])+$/;
     return filter.test(this.data.email);
   }
-  public validate() {
-    return this.validatePassword() && this.validateEmail();
+}
+
+class LoginPasswordValidationHandler extends ValidationHandler<LoginRequestData> {
+  public async handle() {
+    return this.data.password.length >= 6;
+  }
+}
+
+export class LoginValidator extends Validator<LoginRequestData> {
+  constructor(data: LoginRequestData) {
+    super(data, [LoginEmailValidationHandler, LoginPasswordValidationHandler]);
   }
 }

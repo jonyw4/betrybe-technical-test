@@ -11,7 +11,7 @@ describe('api > login > handler', () => {
       }
     });
     // @ts-ignore
-    loginHandler(req, res);
+    await loginHandler(req, res);
     expect(res._getStatusCode()).toBe(200);
     expect(res._getJSONData().token.length).toBe(16);
   });
@@ -24,7 +24,7 @@ describe('api > login > handler', () => {
       }
     });
     // @ts-ignore
-    loginHandler(req, res);
+    await loginHandler(req, res);
     expect(res._getStatusCode()).toBe(400);
     expect(res._getJSONData().message).toBe('Campos inválidos');
   });

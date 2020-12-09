@@ -1,7 +1,6 @@
 import { CoindeskService, GetCurrentPriceBTCResponse, BPI } from '../utils';
-import currenciesExchanges from './currencies.json';
-
-type Currencies = keyof typeof currenciesExchanges;
+import { Currencies } from './types';
+import { CurrenciesService } from './currencies.service';
 
 type LocalBPI = { [key in Currencies]: BPI };
 type AllBPI = GetCurrentPriceBTCResponse['bpi'] & LocalBPI;
@@ -17,7 +16,10 @@ const currenciesName: { [key in Currencies]: string } = {
 };
 
 export class BtcService {
-  constructor(private coindeskService = new CoindeskService()) {}
+  constructor(
+    private coindeskService = new CoindeskService(),
+    private currenciesService = new CurrenciesService()
+  ) {}
   private getBTCRateForCurrency(
     BTCInDolar: number,
     dollarExchange: number
@@ -32,7 +34,9 @@ export class BtcService {
       rate: rate.toLocaleString('en')
     };
   }
-  private getLocalBPIs(BTCInDollar: number) {
+  private async getLocalBPIs(BTCInDollar: number) {
+    const currenciesExchanges = await this.currenciesService.getCurrenciesExchanges();
+
     return Object.keys(currenciesExchanges).reduce(
       (previousValue, currency) => {
         const currencyExchange = Number(currenciesExchanges[currency]);
@@ -48,12 +52,16 @@ export class BtcService {
   }
   public async getCurrentPriceBTC(): Promise<BtcServiceGetCurrentPriceResponse> {
     const currentPrices = await this.coindeskService.getCurrentPriceBTC();
+    const localBPIs = await this.getLocalBPIs(currentPrices.bpi.USD.rate_float);
     return {
       ...currentPrices,
       bpi: {
         ...currentPrices.bpi,
-        ...this.getLocalBPIs(currentPrices.bpi.USD.rate_float)
+        ...localBPIs
       }
     };
+  }
+  public async updateCurrency(currency: Currencies, value: number) {
+    return await this.currenciesService.updateCurrencyExchange(currency, value);
   }
 }

@@ -1,28 +1,31 @@
-import { LoginValidation } from './';
+import { LoginValidator } from './';
+import { ValidationResponseError } from '../validation';
 
 describe('api > login > validation', () => {
   it('should validate an correct input and return true', async () => {
-    const validation = new LoginValidation({
+    const validation = await new LoginValidator({
       email: 'test@test.com',
       password: '123456'
     }).validate();
 
-    expect(validation).toBe(true);
+    expect(validation.valid).toBe(true);
   });
   it('should validate an input with invalid password and return false', async () => {
-    const validation = new LoginValidation({
+    const validation = (await new LoginValidator({
       email: 'test@test.com',
       password: '123'
-    }).validate();
+    }).validate()) as ValidationResponseError;
 
-    expect(validation).toBe(false);
+    expect(validation.valid).toBe(false);
+    expect(validation.handler).toBe('LoginPasswordValidationHandler');
   });
   it('should validate an input with invalid email and return false', async () => {
-    const validation = new LoginValidation({
+    const validation = (await new LoginValidator({
       email: 'test',
       password: '123456'
-    }).validate();
+    }).validate()) as ValidationResponseError;
 
-    expect(validation).toBe(false);
+    expect(validation.valid).toBe(false);
+    expect(validation.handler).toBe('LoginEmailValidationHandler');
   });
 });

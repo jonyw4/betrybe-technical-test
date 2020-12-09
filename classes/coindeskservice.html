@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>LoginService | betrybe-technical-test</title>
+	<title>CoindeskService | betrybe-technical-test</title>
 	<meta name="description" content="Documentation for betrybe-technical-test">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="loginservice.html">LoginService</a>
+					<a href="coindeskservice.html">CoindeskService</a>
 				</li>
 			</ul>
-			<h1>Class LoginService</h1>
+			<h1>Class CoindeskService</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +70,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">LoginService</span>
+						<span class="target">CoindeskService</span>
 					</li>
 				</ul>
 			</section>
@@ -79,71 +79,81 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="coindeskservice.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="coindeskservice.html#client" class="tsd-kind-icon">client</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="loginservice.html#generatetoken" class="tsd-kind-icon">generate<wbr>Token</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="loginservice.html#login" class="tsd-kind-icon">login</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="coindeskservice.html#getcurrentpricebtc" class="tsd-kind-icon">get<wbr>Current<wbr>PriceBTC</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-					<a name="generatetoken" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> generate<wbr>Token</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">generate<wbr>Token<span class="tsd-signature-symbol">(</span>email<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Coindesk<wbr>Service<span class="tsd-signature-symbol">(</span>client<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Got</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="coindeskservice.html" class="tsd-signature-type">CoindeskService</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/e1cab0c/src/api/login/login.service.ts#L8">api/login/login.service.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/e1cab0c/src/api/utils/coindesk.service.ts#L24">api/utils/coindesk.service.ts:24</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Token de 16 caracteres, contendo letras e números aleatórios</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>email: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>password: <span class="tsd-signature-type">string</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> client: <span class="tsd-signature-type">Got</span><span class="tsd-signature-symbol"> = got.extend({ prefixUrl: ENDPOINT, responseType: &#x27;json&#x27; })</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="coindeskservice.html" class="tsd-signature-type">CoindeskService</a></h4>
 						</li>
 					</ul>
 				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="client" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> client</h3>
+					<div class="tsd-signature tsd-kind-icon">client<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Got</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/e1cab0c/src/api/utils/coindesk.service.ts#L26">api/utils/coindesk.service.ts:26</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="login" class="tsd-anchor"></a>
-					<h3>login</h3>
+					<a name="getcurrentpricebtc" class="tsd-anchor"></a>
+					<h3>get<wbr>Current<wbr>PriceBTC</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">login<span class="tsd-signature-symbol">(</span>email<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/loginresponsedata.html" class="tsd-signature-type">LoginResponseData</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Current<wbr>PriceBTC<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/getcurrentpricebtcresponse.html" class="tsd-signature-type">GetCurrentPriceBTCResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/e1cab0c/src/api/login/login.service.ts#L11">api/login/login.service.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/e1cab0c/src/api/utils/coindesk.service.ts#L29">api/utils/coindesk.service.ts:29</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>email: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>password: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/loginresponsedata.html" class="tsd-signature-type">LoginResponseData</a></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/getcurrentpricebtcresponse.html" class="tsd-signature-type">GetCurrentPriceBTCResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -162,27 +172,30 @@
 					<li class=" tsd-kind-class">
 						<a href="btcservice.html" class="tsd-kind-icon">Btc<wbr>Service</a>
 					</li>
-					<li class=" tsd-kind-class">
-						<a href="coindeskservice.html" class="tsd-kind-icon">Coindesk<wbr>Service</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="errorresponse.html" class="tsd-kind-icon">Error<wbr>Response</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
-						<a href="loginservice.html" class="tsd-kind-icon">Login<wbr>Service</a>
+						<a href="coindeskservice.html" class="tsd-kind-icon">Coindesk<wbr>Service</a>
 						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-								<a href="loginservice.html#generatetoken" class="tsd-kind-icon">generate<wbr>Token</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="coindeskservice.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="coindeskservice.html#client" class="tsd-kind-icon">client</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="loginservice.html#login" class="tsd-kind-icon">login</a>
+								<a href="coindeskservice.html#getcurrentpricebtc" class="tsd-kind-icon">get<wbr>Current<wbr>PriceBTC</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="errorresponse.html" class="tsd-kind-icon">Error<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="loginservice.html" class="tsd-kind-icon">Login<wbr>Service</a>
+					</li>
 					<li class=" tsd-kind-class">
 						<a href="loginvalidation.html" class="tsd-kind-icon">Login<wbr>Validation</a>
 					</li>

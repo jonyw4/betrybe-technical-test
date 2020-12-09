@@ -88,6 +88,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="btcservice.html#coindeskservice" class="tsd-kind-icon">coindesk<wbr>Service</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="btcservice.html#currenciesservice" class="tsd-kind-icon">currencies<wbr>Service</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -97,6 +98,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="btcservice.html#getbtcrateforcurrency" class="tsd-kind-icon">getBTCRate<wbr>For<wbr>Currency</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="btcservice.html#getcurrentpricebtc" class="tsd-kind-icon">get<wbr>Current<wbr>PriceBTC</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="btcservice.html#getlocalbpis" class="tsd-kind-icon">get<wbr>LocalBPIs</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="btcservice.html#updatecurrency" class="tsd-kind-icon">update<wbr>Currency</a></li>
 							</ul>
 						</section>
 					</div>
@@ -108,19 +110,22 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Btc<wbr>Service<span class="tsd-signature-symbol">(</span>coindeskService<span class="tsd-signature-symbol">?: </span><a href="coindeskservice.html" class="tsd-signature-type">CoindeskService</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="btcservice.html" class="tsd-signature-type">BtcService</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Btc<wbr>Service<span class="tsd-signature-symbol">(</span>coindeskService<span class="tsd-signature-symbol">?: </span><a href="coindeskservice.html" class="tsd-signature-type">CoindeskService</a>, currenciesService<span class="tsd-signature-symbol">?: </span><a href="currenciesservice.html" class="tsd-signature-type">CurrenciesService</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="btcservice.html" class="tsd-signature-type">BtcService</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/fa14ec5/src/api/btc/btc.service.ts#L19">api/btc/btc.service.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/1029c70/src/api/btc/btc.service.ts#L18">api/btc/btc.service.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> coindeskService: <a href="coindeskservice.html" class="tsd-signature-type">CoindeskService</a><span class="tsd-signature-symbol"> = new CoindeskService()</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> currenciesService: <a href="currenciesservice.html" class="tsd-signature-type">CurrenciesService</a><span class="tsd-signature-symbol"> = new CurrenciesService()</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="btcservice.html" class="tsd-signature-type">BtcService</a></h4>
@@ -136,7 +141,17 @@
 					<div class="tsd-signature tsd-kind-icon">coindesk<wbr>Service<span class="tsd-signature-symbol">:</span> <a href="coindeskservice.html" class="tsd-signature-type">CoindeskService</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/fa14ec5/src/api/btc/btc.service.ts#L20">api/btc/btc.service.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/1029c70/src/api/btc/btc.service.ts#L20">api/btc/btc.service.ts:20</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="currenciesservice" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> currencies<wbr>Service</h3>
+					<div class="tsd-signature tsd-kind-icon">currencies<wbr>Service<span class="tsd-signature-symbol">:</span> <a href="currenciesservice.html" class="tsd-signature-type">CurrenciesService</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/1029c70/src/api/btc/btc.service.ts#L21">api/btc/btc.service.ts:21</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -153,7 +168,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/fa14ec5/src/api/btc/btc.service.ts#L27">api/btc/btc.service.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/1029c70/src/api/btc/btc.service.ts#L29">api/btc/btc.service.ts:29</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -179,7 +194,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/fa14ec5/src/api/btc/btc.service.ts#L21">api/btc/btc.service.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/1029c70/src/api/btc/btc.service.ts#L23">api/btc/btc.service.ts:23</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -205,7 +220,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/fa14ec5/src/api/btc/btc.service.ts#L49">api/btc/btc.service.ts:49</a></li>
+									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/1029c70/src/api/btc/btc.service.ts#L53">api/btc/btc.service.ts:53</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/btcservicegetcurrentpriceresponse.html" class="tsd-signature-type">BtcServiceGetCurrentPriceResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -216,13 +231,13 @@
 					<a name="getlocalbpis" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> get<wbr>LocalBPIs</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>LocalBPIs<span class="tsd-signature-symbol">(</span>BTCInDollar<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../globals.html#allbpi" class="tsd-signature-type">AllBPI</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>LocalBPIs<span class="tsd-signature-symbol">(</span>BTCInDollar<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#allbpi" class="tsd-signature-type">AllBPI</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/fa14ec5/src/api/btc/btc.service.ts#L35">api/btc/btc.service.ts:35</a></li>
+									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/1029c70/src/api/btc/btc.service.ts#L37">api/btc/btc.service.ts:37</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -231,7 +246,33 @@
 									<h5>BTCInDollar: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../globals.html#allbpi" class="tsd-signature-type">AllBPI</a></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#allbpi" class="tsd-signature-type">AllBPI</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="updatecurrency" class="tsd-anchor"></a>
+					<h3>update<wbr>Currency</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Currency<span class="tsd-signature-symbol">(</span>currency<span class="tsd-signature-symbol">: </span><a href="../globals.html#currencies" class="tsd-signature-type">Currencies</a>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/1029c70/src/api/btc/btc.service.ts#L64">api/btc/btc.service.ts:64</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>currency: <a href="../globals.html#currencies" class="tsd-signature-type">Currencies</a></h5>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -247,6 +288,9 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="btccurrencyvalidationhandler.html" class="tsd-kind-icon">Btc<wbr>Currency<wbr>Validation<wbr>Handler</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
@@ -257,6 +301,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="btcservice.html#coindeskservice" class="tsd-kind-icon">coindesk<wbr>Service</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="btcservice.html#currenciesservice" class="tsd-kind-icon">currencies<wbr>Service</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
 								<a href="btcservice.html#createlocalbpi" class="tsd-kind-icon">create<wbr>Local<wbr>Bpi</a>
@@ -270,12 +317,24 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
 								<a href="btcservice.html#getlocalbpis" class="tsd-kind-icon">get<wbr>LocalBPIs</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="btcservice.html#updatecurrency" class="tsd-kind-icon">update<wbr>Currency</a>
+							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-class">
+						<a href="btcupdatevalidator.html" class="tsd-kind-icon">Btc<wbr>Update<wbr>Validator</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="btcvaluevalidationhandler.html" class="tsd-kind-icon">Btc<wbr>Value<wbr>Validation<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="coindeskservice.html" class="tsd-kind-icon">Coindesk<wbr>Service</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="currenciesservice.html" class="tsd-kind-icon">Currencies<wbr>Service</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="errorresponse.html" class="tsd-kind-icon">Error<wbr>Response</a>
@@ -308,6 +367,12 @@
 						<a href="../interfaces/btcservicegetcurrentpriceresponse.html" class="tsd-kind-icon">Btc<wbr>Service<wbr>Get<wbr>Current<wbr>Price<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="../interfaces/btcupdaterequestdata.html" class="tsd-kind-icon">Btc<wbr>Update<wbr>Request<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/btcupdateresponsedata.html" class="tsd-kind-icon">Btc<wbr>Update<wbr>Response<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="../interfaces/errorresponsecontent.html" class="tsd-kind-icon">Error<wbr>Response<wbr>Content</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
@@ -335,6 +400,9 @@
 						<a href="../globals.html#currencies" class="tsd-kind-icon">Currencies</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#currenciesexchanges" class="tsd-kind-icon">Currencies<wbr>Exchanges</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#localbpi" class="tsd-kind-icon">LocalBPI</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
@@ -346,8 +414,17 @@
 					<li class=" tsd-kind-variable">
 						<a href="../globals.html#endpoint" class="tsd-kind-icon">ENDPOINT</a>
 					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#file_path" class="tsd-kind-icon">FILE_<wbr>PATH</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#btcgethandler" class="tsd-kind-icon">btc<wbr>Get<wbr>Handler</a>
+					</li>
 					<li class=" tsd-kind-function">
 						<a href="../globals.html#btchandler" class="tsd-kind-icon">btc<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#btcupdatehandler" class="tsd-kind-icon">btc<wbr>Update<wbr>Handler</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="../globals.html#jsonresponse" class="tsd-kind-icon">json<wbr>Response</a>
@@ -384,6 +461,9 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
 			</ul>
 		</div>
 	</div>

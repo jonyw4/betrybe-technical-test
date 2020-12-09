@@ -1,6 +1,6 @@
 import type { NextApiHandler } from 'next';
 import { LoginService } from './login.service';
-import { LoginValidation } from './login.validation';
+import { LoginValidator } from './login.validation';
 import { ValidationErrorResponse } from '../errors';
 import { jsonResponse } from '../utils';
 
@@ -11,9 +11,9 @@ export const loginHandler: NextApiHandler = (req, res) => {
       password: req.body.password
     };
 
-    const validation = new LoginValidation(data).validate();
+    const validation = new LoginValidator(data).validate();
 
-    if (!validation) {
+    if (!validation.valid) {
       new ValidationErrorResponse(res);
       return;
     }

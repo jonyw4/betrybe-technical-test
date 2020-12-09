@@ -3,7 +3,7 @@ import { ValidationResponseError } from '../validation';
 
 describe('api > login > validation', () => {
   it('should validate an correct input and return true', async () => {
-    const validation = new LoginValidator({
+    const validation = await new LoginValidator({
       email: 'test@test.com',
       password: '123456'
     }).validate();
@@ -11,19 +11,19 @@ describe('api > login > validation', () => {
     expect(validation.valid).toBe(true);
   });
   it('should validate an input with invalid password and return false', async () => {
-    const validation = new LoginValidator({
+    const validation = (await new LoginValidator({
       email: 'test@test.com',
       password: '123'
-    }).validate() as ValidationResponseError;
+    }).validate()) as ValidationResponseError;
 
     expect(validation.valid).toBe(false);
     expect(validation.handler).toBe('LoginPasswordValidationHandler');
   });
   it('should validate an input with invalid email and return false', async () => {
-    const validation = new LoginValidator({
+    const validation = (await new LoginValidator({
       email: 'test',
       password: '123456'
-    }).validate() as ValidationResponseError;
+    }).validate()) as ValidationResponseError;
 
     expect(validation.valid).toBe(false);
     expect(validation.handler).toBe('LoginEmailValidationHandler');

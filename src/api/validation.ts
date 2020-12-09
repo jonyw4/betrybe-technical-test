@@ -1,6 +1,6 @@
 export abstract class ValidationHandler<T> {
   constructor(protected data: T) {}
-  public abstract handle(): boolean;
+  public abstract async handle(): Promise<boolean>;
 }
 
 export interface ValidationResponseSuccess {
@@ -19,9 +19,9 @@ export abstract class Validator<T> {
     protected data: T,
     protected handlers: Array<new (data: T) => ValidationHandler<T>>
   ) {}
-  public validate(): ValidationResponse {
+  public async validate(): Promise<ValidationResponse> {
     for (const Handler of this.handlers) {
-      const valid = new Handler(this.data).handle();
+      const valid = await new Handler(this.data).handle();
       if (!valid) {
         return {
           valid: false,

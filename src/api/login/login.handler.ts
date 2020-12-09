@@ -4,14 +4,14 @@ import { LoginValidator } from './login.validation';
 import { ValidationErrorResponse } from '../errors';
 import { jsonResponse } from '../utils';
 
-export const loginHandler: NextApiHandler = (req, res) => {
+export const loginHandler: NextApiHandler = async (req, res) => {
   if (req.method === 'POST') {
     const data = {
       email: req.body.email,
       password: req.body.password
     };
 
-    const validation = new LoginValidator(data).validate();
+    const validation = await new LoginValidator(data).validate();
 
     if (!validation.valid) {
       new ValidationErrorResponse(res);

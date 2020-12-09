@@ -3,14 +3,14 @@ import { ValidationHandler, Validator } from '../validation';
 import { LoginRequestData } from './login.types';
 
 class LoginEmailValidationHandler extends ValidationHandler<LoginRequestData> {
-  public handle() {
+  public async handle() {
     const filter = /^([a-zA-Z0-9_\.\-])+\@([a-zA-Z0-9_\.\-])+$/;
     return filter.test(this.data.email);
   }
 }
 
 class LoginPasswordValidationHandler extends ValidationHandler<LoginRequestData> {
-  public handle() {
+  public async handle() {
     return this.data.password.length >= 6;
   }
 }

@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "docs": "typedoc --out docs src",
-    "test": "jest --collectCoverage",
-    "test:ci": "jest --collectCoverage && codecov"
+    "test": "jest --collectCoverage --runInBand",
+    "test:ci": "npm run test && codecov"
   },
   "dependencies": {
     "@types/got": "9.6.11",

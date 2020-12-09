@@ -1,5 +1,5 @@
 import { BtcService } from './';
-import currencies from './currencies.json';
+import currencies from '../../../public/currencies.json';
 describe('api > btc > service', () => {
   it('should  get current price BTC values with success', async () => {
     const response = await new BtcService().getCurrentPriceBTC();

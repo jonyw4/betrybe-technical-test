@@ -1,13 +1,13 @@
 import got from 'got';
 
-interface BPI {
+export interface BPI {
   code: string;
   rate: string;
   description: string;
   rate_float: number;
 }
 
-interface GetCurrentPriceBTCResponse {
+export interface GetCurrentPriceBTCResponse {
   time: {
     updated: string;
     updatedISO: string;

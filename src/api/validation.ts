@@ -1,6 +1,6 @@
 export abstract class ValidationHandler<T> {
   constructor(protected data: T) {}
-  public abstract async handle(): Promise<boolean>;
+  public abstract handle(): Promise<boolean>;
 }
 
 export interface ValidationResponseSuccess {

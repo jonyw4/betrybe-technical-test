@@ -1,2 +1,4 @@
+export * from './types';
 export * from './btc.service';
-export * from './btc.handler';
+export * from './get';
+export * from './update';

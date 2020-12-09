@@ -1,10 +1,12 @@
 import type { NextApiHandler } from 'next';
-import { BtcService } from './btc.service';
-import { jsonResponse } from '../utils';
+import { btcGetHandler } from './get';
+import { btcUpdateHandler } from './update';
 
 export const btcHandler: NextApiHandler = async (req, res) => {
+  if (req.method === 'POST') {
+    return btcUpdateHandler(req, res);
+  }
   if (req.method === 'GET') {
-    const response = await new BtcService().getCurrentPriceBTC();
-    jsonResponse(res, 200, response);
+    return btcGetHandler(req, res);
   }
 };

@@ -21,7 +21,10 @@ export class CurrenciesService {
     value: number
   ): Promise<boolean> {
     const currenciesExchanges = await this.getCurrenciesExchanges();
-    const data = { ...currenciesExchanges, [currency]: String(value) };
+    const data = {
+      ...currenciesExchanges,
+      [currency]: Number(value).toFixed(3)
+    };
     try {
       await fs.promises.writeFile(
         path.resolve(__dirname, FILE_PATH),

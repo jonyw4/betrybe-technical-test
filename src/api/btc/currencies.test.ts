@@ -17,7 +17,7 @@ describe('api > btc > CurrencyService', () => {
     );
     const currencyExchanges = await new CurrenciesService().getCurrenciesExchanges();
     expect(response).toBe(true);
-    expect(currencyExchanges.BRL).toBe('6');
+    expect(currencyExchanges.BRL).toBe('6.000');
   });
   afterAll(async () => {
     await new CurrenciesService().updateCurrencyExchange('BRL', 5.4);

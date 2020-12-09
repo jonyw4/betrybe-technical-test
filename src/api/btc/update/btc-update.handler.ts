@@ -23,8 +23,6 @@ export const btcUpdateHandler: NextApiHandler = async (req, res) => {
       new ValidationErrorResponse(res, 'Moeda inválida');
     } else if (validation.handler === 'BtcValueValidationHandler') {
       new ValidationErrorResponse(res, 'Valor inválido');
-    } else {
-      new ValidationErrorResponse(res);
     }
     return;
   }
@@ -34,7 +32,5 @@ export const btcUpdateHandler: NextApiHandler = async (req, res) => {
   );
   if (response) {
     jsonResponse(res, 200, { message: 'Valor alterado com sucesso!' });
-  } else {
-    jsonResponse(res, 500, { message: 'Erro interno' });
   }
 };

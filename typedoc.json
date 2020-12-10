@@ -1,4 +1,5 @@
 {
   "mode": "file",
-  "out": "docs"
+  "out": "docs",
+  "exclude": "**/*+(e2e|spec|index).+(ts|tsx)"
 }

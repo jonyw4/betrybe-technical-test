@@ -34,7 +34,7 @@ export class BtcService {
       rate: rate.toLocaleString('en')
     };
   }
-  private async getLocalBPIs(BTCInDollar: number) {
+  private async generateLocalBPIs(BTCInDollar: number) {
     const currenciesExchanges = await this.currenciesService.getCurrenciesExchanges();
 
     return Object.keys(currenciesExchanges).reduce(
@@ -52,7 +52,9 @@ export class BtcService {
   }
   public async getCurrentPriceBTC(): Promise<BtcServiceGetCurrentPriceResponse> {
     const currentPrices = await this.coindeskService.getCurrentPriceBTC();
-    const localBPIs = await this.getLocalBPIs(currentPrices.bpi.USD.rate_float);
+    const localBPIs = await this.generateLocalBPIs(
+      currentPrices.bpi.USD.rate_float
+    );
     return {
       ...currentPrices,
       bpi: {

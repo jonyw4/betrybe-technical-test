@@ -1,4 +1,4 @@
-import got from 'got';
+import axios from 'axios';
 
 export interface BPI {
   code: string;
@@ -22,13 +22,16 @@ export interface GetCurrentPriceBTCResponse {
 const ENDPOINT = 'https://api.coindesk.com/v1/';
 
 export class CoindeskService {
-  constructor(
-    private client = got.extend({ prefixUrl: ENDPOINT, responseType: 'json' })
-  ) {}
+  constructor(private client = axios.create({ baseURL: ENDPOINT })) {}
 
   async getCurrentPriceBTC(): Promise<GetCurrentPriceBTCResponse> {
-    return await this.client('bpi/currentprice/BTC.json', {
-      method: 'GET'
-    }).json<GetCurrentPriceBTCResponse>();
+    return (
+      await this.client.get<GetCurrentPriceBTCResponse>(
+        'bpi/currentprice/BTC.json',
+        {
+          method: 'GET'
+        }
+      )
+    ).data;
   }
 }

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components > BtcRate should renders a BtcRate correctly 1`] = `
+<div
+  className="btc-rate"
+>
+  <div
+    className="btc-rate__title"
+  >
+    BRL
+  </div>
+  <div
+    className="btc-rate__rate"
+  >
+    10
+  </div>
+</div>
+`;

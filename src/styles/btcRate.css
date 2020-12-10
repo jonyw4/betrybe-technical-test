@@ -1,0 +1,17 @@
+.btc-rate{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  justify-content: center;
+}
+.btc-rate__rate {
+  border: 0;
+  padding: 10px;
+  background-color: #c4c4c4;
+  display: block;
+  margin-top: 5px;
+}
+.btc-rate__title {
+  text-align: center;
+  width: 100%;
+}

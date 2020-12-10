@@ -1,0 +1,12 @@
+.alert {
+  background-color: #ebebeb;
+  border: 1px solid #b1b1b1;
+  padding: 5px;
+  font-size: 15px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.alert--warning {
+  background-color: #f3ec72;
+  border: 1px solid #f19920;
+}

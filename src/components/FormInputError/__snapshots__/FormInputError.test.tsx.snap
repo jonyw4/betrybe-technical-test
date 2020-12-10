@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components > FormInputError should renders a FormInputError with custom message correctly 1`] = `
+<div
+  className="form-input-error"
+>
+  Campo diferenciado
+</div>
+`;
+
+exports[`components > FormInputError should renders a default FormInputError correctly 1`] = `
+<div
+  className="form-input-error"
+>
+  Esse campo é obrigatório
+</div>
+`;

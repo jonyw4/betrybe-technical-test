@@ -1,4 +1,4 @@
-name: Build and Publish
+name: Main
 push:
   branches:
     - main
@@ -7,7 +7,7 @@ env:
   CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
-  build:
+  build-and-publish:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2

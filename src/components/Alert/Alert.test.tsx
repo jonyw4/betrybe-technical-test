@@ -1,17 +1,14 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { mount } from 'cypress-react-unit-test';
 import { Alert } from './Alert.component';
 
 describe('components > Alert', () => {
-  it('should renders a default alert correctly', () => {
-    const tree = renderer.create(<Alert>Alerta Padrão</Alert>).toJSON();
-    expect(tree).toMatchSnapshot();
+  it('should render a default alert correctly', () => {
+    mount(<Alert>Alerta Padrão</Alert>);
+    cy.get('.alert').should('have.class', 'alert--default');
   });
-
-  it('should renders a warning alert correctly', () => {
-    const tree = renderer
-      .create(<Alert type="warning">Alerta de Aviso</Alert>)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+  it('should render a warning alert correctly', () => {
+    mount(<Alert type="warning">Alerta de Aviso</Alert>);
+    cy.get('.alert').should('have.class', 'alert--warning');
   });
 });

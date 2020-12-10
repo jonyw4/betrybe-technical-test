@@ -1,0 +1,6 @@
+{
+  "experimentalComponentTesting": true,
+  "componentFolder": "src/components",
+  "testFiles": "**/*.test.*",
+  "baseUrl": "http://localhost:8080"
+}

@@ -1,4 +1,4 @@
-name: Test, build and deploy
+name: Build and Publish
 on: [push]
 env:
   NPM_TOKEN: ${{secrets.NPM_TOKEN}}
@@ -15,10 +15,6 @@ jobs:
         node-version: '12.x'
     - name: Install dependencies
       run: yarn install
-    - name: Lint
-      run: yarn lint
-    - name: Test
-      run: yarn test:ci
     - name: Build docs
       run: yarn docs
     - name: Deploy Docs

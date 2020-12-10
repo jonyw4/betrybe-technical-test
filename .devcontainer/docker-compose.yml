@@ -1,0 +1,14 @@
+version: "3"
+services:
+  dev:
+    build: .
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    volumes:
+      - ..:/workspace:cached
+      - node_modules:/workspace/node_modules
+      # Add acesso a pasta X11 Do UNITX
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      - DISPLAY=host.docker.internal:0
+volumes:
+  node_modules:

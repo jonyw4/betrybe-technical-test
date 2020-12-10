@@ -1,11 +1,13 @@
-name: Test, build and deploy
-on: [push]
+name: Main
+push:
+  branches:
+    - main
 env:
   NPM_TOKEN: ${{secrets.NPM_TOKEN}}
   CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
-  build:
+  build-and-publish:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -15,10 +17,6 @@ jobs:
         node-version: '12.x'
     - name: Install dependencies
       run: yarn install
-    - name: Lint
-      run: yarn lint
-    - name: Test
-      run: yarn test:ci
     - name: Build docs
       run: yarn docs
     - name: Deploy Docs

@@ -4,6 +4,7 @@ env:
   NPM_TOKEN: ${{secrets.NPM_TOKEN}}
   CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  PORT: 8080
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -27,4 +28,4 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           build: yarn build
-          start: PORT=8080 yarn start
+          start: yarn start

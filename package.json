@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-on-netlify",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "docs": "typedoc --out docs src",
     "test": "jest --collectCoverage --runInBand",

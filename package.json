@@ -11,7 +11,7 @@
     "test": "npm run test:api && npm run test:e2e",
     "cy:open": "cypress open",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "docs": "typedoc --out docs src"
+    "docs": "typedoc --exclude \"**/*+(index|test).+(ts|tsx)\" --out docs src"
   },
   "dependencies": {
     "@types/axios": "0.14.0",

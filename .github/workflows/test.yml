@@ -11,11 +11,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Cypress run
+      - name: Component and E2E test
         uses: cypress-io/github-action@v2
         with:
           build: yarn build
           start: yarn start
+      - name: API Unit test
+        run: yarn test:ci
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
         with:

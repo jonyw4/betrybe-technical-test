@@ -66,7 +66,7 @@ export default function UpdatePage({
         </a>
       </Link>
       <form onSubmit={handleSubmit(onSubmit)}>
-        {requestError && <Alert message={requestError} type="warning" />}
+        {requestError && <Alert type="warning">{requestError}</Alert>}
 
         <div className="mb-1">
           <label htmlFor="currency" className="mb-1">

@@ -26,7 +26,7 @@ export default function LoginPage() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      {requestError && <Alert message={requestError} type="warning" />}
+      {requestError && <Alert type="warning">{requestError}</Alert>}
 
       <div className="mb-1">
         <label htmlFor="email">Email</label>

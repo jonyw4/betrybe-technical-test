@@ -1,1 +1,1 @@
-export * from './FormInputError';
+export * from './FormInputError.component';

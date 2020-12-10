@@ -3,11 +3,11 @@ import * as React from 'react';
 /**
  * Alert box
  */
-export function Alert({ message, type = 'default' }: AlertProps) {
-  return <div className={`alert alert--${type}`}>{message}</div>;
+export function Alert({ children, type = 'default' }: AlertProps) {
+  return <div className={`alert alert--${type}`}>{children}</div>;
 }
 
 interface AlertProps {
-  message: string;
+  children: string;
   type?: 'default' | 'warning';
 }

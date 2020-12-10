@@ -1,7 +1,8 @@
 name: Main
-push:
-  branches:
-    - main
+on:
+  push:
+    branches:
+      - main
 env:
   NPM_TOKEN: ${{secrets.NPM_TOKEN}}
   CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}

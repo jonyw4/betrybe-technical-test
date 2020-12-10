@@ -1,0 +1,22 @@
+.btn {
+  border: 0;
+  padding: 10px 20px;
+  background-color: #c4c4c4;
+  cursor: pointer;
+  color: #000;
+  display: inline-block;
+}
+.btn:hover {
+  background-color: #727272;
+}
+.btn--success{
+  background-color: #5fe122;
+}
+.btn--success:hover {
+  background-color: #41a014;
+} 
+.btn:disabled {
+  opacity: 0.8;
+  cursor: initial;
+  background-color: #ccc;
+}

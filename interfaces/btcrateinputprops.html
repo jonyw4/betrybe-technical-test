@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BtcRateProps | betrybe-technical-test</title>
+	<title>BtcRateInputProps | betrybe-technical-test</title>
 	<meta name="description" content="Documentation for betrybe-technical-test">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="btcrateprops.html">BtcRateProps</a>
+					<a href="btcrateinputprops.html">BtcRateInputProps</a>
 				</li>
 			</ul>
-			<h1>Interface BtcRateProps</h1>
+			<h1>Interface BtcRateInputProps</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +70,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">BtcRateProps</span>
+						<span class="target">BtcRateInputProps</span>
 					</li>
 				</ul>
 			</section>
@@ -81,8 +81,10 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="btcrateprops.html#rate" class="tsd-kind-icon">rate</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="btcrateprops.html#title" class="tsd-kind-icon">title</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="btcrateinputprops.html#disabled" class="tsd-kind-icon">disabled</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="btcrateinputprops.html#onchange" class="tsd-kind-icon">on<wbr>Change</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="btcrateinputprops.html#rate" class="tsd-kind-icon">rate</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="btcrateinputprops.html#title" class="tsd-kind-icon">title</a></li>
 							</ul>
 						</section>
 					</div>
@@ -91,12 +93,53 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="rate" class="tsd-anchor"></a>
-					<h3>rate</h3>
-					<div class="tsd-signature tsd-kind-icon">rate<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="disabled" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> disabled</h3>
+					<div class="tsd-signature tsd-kind-icon">disabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/07ead6b/src/components/BtcRate/BtcRate.component.tsx#L13">src/components/BtcRate/BtcRate.component.tsx:13</a></li>
+							<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/440b716/src/components/BtcRateInput/BtcRateInput.component.tsx#L29">src/components/BtcRateInput/BtcRateInput.component.tsx:29</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="onchange" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Change</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Change<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ChangeEvent</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLInputElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/440b716/src/components/BtcRateInput/BtcRateInput.component.tsx#L30">src/components/BtcRateInput/BtcRateInput.component.tsx:30</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ChangeEvent</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLInputElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>event: <span class="tsd-signature-type">ChangeEvent</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLInputElement</span><span class="tsd-signature-symbol">&gt;</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="rate" class="tsd-anchor"></a>
+					<h3>rate</h3>
+					<div class="tsd-signature tsd-kind-icon">rate<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/440b716/src/components/BtcRateInput/BtcRateInput.component.tsx#L27">src/components/BtcRateInput/BtcRateInput.component.tsx:27</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -106,7 +149,7 @@
 					<div class="tsd-signature tsd-kind-icon">title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/07ead6b/src/components/BtcRate/BtcRate.component.tsx#L14">src/components/BtcRate/BtcRate.component.tsx:14</a></li>
+							<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/440b716/src/components/BtcRateInput/BtcRateInput.component.tsx#L28">src/components/BtcRateInput/BtcRateInput.component.tsx:28</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -125,13 +168,19 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="btcrateprops.html" class="tsd-kind-icon">Btc<wbr>Rate<wbr>Props</a>
+						<a href="btcrateinputprops.html" class="tsd-kind-icon">Btc<wbr>Rate<wbr>Input<wbr>Props</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="btcrateprops.html#rate" class="tsd-kind-icon">rate</a>
+								<a href="btcrateinputprops.html#disabled" class="tsd-kind-icon">disabled</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="btcrateprops.html#title" class="tsd-kind-icon">title</a>
+								<a href="btcrateinputprops.html#onchange" class="tsd-kind-icon">on<wbr>Change</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="btcrateinputprops.html#rate" class="tsd-kind-icon">rate</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="btcrateinputprops.html#title" class="tsd-kind-icon">title</a>
 							</li>
 						</ul>
 					</li>

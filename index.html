@@ -64,6 +64,117 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
+				<a href="#💲-crypto-index-betrybe-technical-test" id="💲-crypto-index-betrybe-technical-test" style="color: inherit; text-decoration: none;">
+					<h1>💲 Crypto Index (betrybe-technical-test)</h1>
+				</a>
+				<p><a href="https://codecov.io/gh/jonyw4/betrybe-technical-test"><img src="https://codecov.io/gh/jonyw4/betrybe-technical-test/branch/main/graph/badge.svg?token=ZCG023NWZW" alt="codecov"></a>
+				<a href="https://github.com/semantic-release/semantic-release"><img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg" alt="semantic-release"></a></p>
+				<p>This app is a test application to betrybe and its a example of how could be a real profissional repository with unit and e2e test, CI, CD and semantic release.</p>
+				<p>I try to use some common design patterns to resolve common problems like: Chain of responsibility, facade, states, and I try to maintain and apply some SOLID concepts too.</p>
+				<a href="#stack" id="stack" style="color: inherit; text-decoration: none;">
+					<h2>Stack</h2>
+				</a>
+				<ul>
+					<li>Typescript</li>
+					<li>React</li>
+					<li>NextJS</li>
+					<li>NodeJS</li>
+				</ul>
+				<a href="#how-to-use" id="how-to-use" style="color: inherit; text-decoration: none;">
+					<h2>How to use?</h2>
+				</a>
+				<p>You can access the app <a href="https://betrybe-technical-test.herokuapp.com/">throw this link</a>.</p>
+				<a href="#project-structure" id="project-structure" style="color: inherit; text-decoration: none;">
+					<h1>Project Structure</h1>
+				</a>
+				<ul>
+					<li><code>cypress</code>: Cypress file and E2E tests</li>
+					<li><code>src</code>: Source code<ul>
+							<li><code>api</code>: API code<ul>
+									<li><code>btc</code>: Bitcoin handlers, services and validators</li>
+									<li><code>errors</code>: Handler error response classes</li>
+									<li><code>login</code>: Login handlers, services and validators</li>
+									<li><code>utils</code>: Some utils code for api</li>
+								</ul>
+							</li>
+							<li><code>components</code>: React components</li>
+							<li><code>pages</code>: NextJS pages and API<ul>
+									<li><code>api</code>: All api routes ( I use only to define which api handlers works on each route)</li>
+								</ul>
+							</li>
+							<li><code>styles</code>: All CSS code</li>
+							<li><code>utils</code>: Some utils code to all app</li>
+						</ul>
+					</li>
+				</ul>
+				<a href="#test" id="test" style="color: inherit; text-decoration: none;">
+					<h2>Test</h2>
+				</a>
+				<a href="#api-unit-test" id="api-unit-test" style="color: inherit; text-decoration: none;">
+					<h3>API unit test</h3>
+				</a>
+				<p>All API functions are been testing using Jest.</p>
+				<a href="#react-component-test" id="react-component-test" style="color: inherit; text-decoration: none;">
+					<h3>React Component test</h3>
+				</a>
+				<p>All React Components are been testing using Cypress with <code>cypress-react-unit-test</code>. I choose that library because renders the components in a real browser, so is more reliable.</p>
+				<a href="#e2e-tests" id="e2e-tests" style="color: inherit; text-decoration: none;">
+					<h3>E2E tests</h3>
+				</a>
+				<p>All pages and the final app is been testing using Cypress.</p>
+				<a href="#continuos-integration" id="continuos-integration" style="color: inherit; text-decoration: none;">
+					<h2>Continuos Integration</h2>
+				</a>
+				<a href="#every-push" id="every-push" style="color: inherit; text-decoration: none;">
+					<h3>Every Push</h3>
+				</a>
+				<p>On every push the application is tested by Cypress, Jest and update the coverage to Codecov service.</p>
+				<a href="#on-pull-request" id="on-pull-request" style="color: inherit; text-decoration: none;">
+					<h3>On Pull Request</h3>
+				</a>
+				<p>On every PR the application is tested by ESLint.</p>
+				<a href="#on-push-main" id="on-push-main" style="color: inherit; text-decoration: none;">
+					<h3>On Push Main</h3>
+				</a>
+				<p>On every push to <code>main</code> branch GitHub action build and deploy the docs to GitHub pages of this repository. After that it uses semantic release to check all commits and create tag, releases and comments on GitHub .</p>
+				<a href="#deploy" id="deploy" style="color: inherit; text-decoration: none;">
+					<h2>Deploy</h2>
+				</a>
+				<p>I choose Heroku to deploy this application. I tried with Vercel and Netlify but the API didn&#39;t update the <code>currency.json</code> file because it was published to the AWS servers.
+					On the other side, Heroku manatins the file on the server, and then the API may update the file with success.
+				Heroku is configured to deploy automatically on every PR and on every push to main branch.</p>
+				<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+					<h2>Documentation</h2>
+				</a>
+				<p><a href="https://jonyw4.github.io/betrybe-technical-test/">All documentation is available throw this link</a>. Uses Typedoc to generate a page with all API based on Typescript <code>/src</code> folder.</p>
+				<a href="#how-to-contribute" id="how-to-contribute" style="color: inherit; text-decoration: none;">
+					<h2>How to contribute</h2>
+				</a>
+				<p>This repo is using VSCode dev container + Docker to create an dev environment, so its really easy to start developing. </p>
+				<ol>
+					<li>Clone this repo</li>
+					<li><a href="https://betrybe-technical-test.herokuapp.com/">Open this repo as container on VScode</a>.</li>
+				</ol>
+				<a href="#dev" id="dev" style="color: inherit; text-decoration: none;">
+					<h3>Dev</h3>
+				</a>
+				<p>Just run <code>yarn dev</code> and open <code>localhost:8008</code> on the browser to start using</p>
+				<a href="#test-1" id="test-1" style="color: inherit; text-decoration: none;">
+					<h3>Test</h3>
+				</a>
+				<p>To test locally you need to be running a dev on localhost using <code>yarn dev</code>. After that you can use <code>yarn test</code> or <code>yarn test:api</code> / <code>yarn test:e2e</code> </p>
+				<a href="#lint" id="lint" style="color: inherit; text-decoration: none;">
+					<h3>Lint</h3>
+				</a>
+				<p>Use <code>yarn lint</code></p>
+				<a href="#docs" id="docs" style="color: inherit; text-decoration: none;">
+					<h3>Docs</h3>
+				</a>
+				<p>Use <code>yarn docs</code></p>
+				<a href="#build" id="build" style="color: inherit; text-decoration: none;">
+					<h3>Build</h3>
+				</a>
+				<p>Use <code>yarn docs</code></p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -137,7 +248,7 @@
 						<a href="interfaces/bpi.html" class="tsd-kind-icon">BPI</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/btcrateprops.html" class="tsd-kind-icon">Btc<wbr>Rate<wbr>Props</a>
+						<a href="interfaces/btcrateinputprops.html" class="tsd-kind-icon">Btc<wbr>Rate<wbr>Input<wbr>Props</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/btcservicegetcurrentpriceresponse.html" class="tsd-kind-icon">Btc<wbr>Service<wbr>Get<wbr>Current<wbr>Price<wbr>Response</a>
@@ -200,6 +311,12 @@
 						<a href="globals.html#allbpi" class="tsd-kind-icon">AllBPI</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#btcgethandlerresponse" class="tsd-kind-icon">Btc<wbr>Get<wbr>Handler<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#btcupdatehandlerresponse" class="tsd-kind-icon">Btc<wbr>Update<wbr>Handler<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#currencies" class="tsd-kind-icon">Currencies</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
@@ -216,6 +333,9 @@
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#localbpi" class="tsd-kind-icon">LocalBPI</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#loginhandlerresponse" class="tsd-kind-icon">Login<wbr>Handler<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-is-external">
 						<a href="globals.html#numbermatcher" class="tsd-kind-icon">Number<wbr>Matcher</a>
@@ -260,10 +380,13 @@
 						<a href="globals.html#alert" class="tsd-kind-icon">Alert</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#btcrate" class="tsd-kind-icon">Btc<wbr>Rate</a>
+						<a href="globals.html#btcrateinput" class="tsd-kind-icon">Btc<wbr>Rate<wbr>Input</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#forminputerror" class="tsd-kind-icon">Form<wbr>Input<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#loading" class="tsd-kind-icon">Loading</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#loginpage" class="tsd-kind-icon">Login<wbr>Page</a>
@@ -286,7 +409,7 @@
 					<li class=" tsd-kind-function">
 						<a href="globals.html#getserversideprops" class="tsd-kind-icon">get<wbr>Server<wbr>Side<wbr>Props</a>
 					</li>
-					<li class=" tsd-kind-function">
+					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="globals.html#jsonresponse" class="tsd-kind-icon">json<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-function">

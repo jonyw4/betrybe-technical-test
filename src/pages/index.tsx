@@ -2,14 +2,14 @@ import * as React from 'react';
 import Link from 'next/link';
 import { useApiClient } from '../utils';
 import { BtcRate, Loading } from '../components';
+import { ApiGetBtcResponse } from '../api';
 
 export default function HomePage() {
-  const { data } = useApiClient('/crypo/btc');
+  const { data } = useApiClient<ApiGetBtcResponse>('/crypo/btc');
 
   if (!data) {
     return <Loading />;
   }
-  // @ts-ignore
   const bpi = data.data.bpi;
   return (
     <div>

@@ -1,12 +1,17 @@
 import * as React from 'react';
-import { AxiosError } from 'axios';
+import { GetServerSideProps, InferGetStaticPropsType } from 'next';
+import Head from 'next/head';
 import Router from 'next/router';
+import Link from 'next/link';
+import { AxiosError } from 'axios';
 import { useForm } from 'react-hook-form';
 import { FormInputError, Alert } from '../components';
 import { apiClient } from '../utils';
-import { CurrenciesService, CurrenciesExchanges } from '../api/btc';
-import { GetServerSideProps, InferGetStaticPropsType } from 'next';
-import Link from 'next/link';
+import {
+  CurrenciesService,
+  CurrenciesExchanges,
+  ApiUpdateBtcResponse
+} from '../api';
 
 export const getServerSideProps: GetServerSideProps<{
   currenciesExchanges: CurrenciesExchanges;
@@ -40,7 +45,7 @@ export default function UpdatePage({
   const onSubmit = async (values) => {
     setRequestError(null);
     try {
-      await apiClient.post(
+      await apiClient.post<ApiUpdateBtcResponse>(
         '/crypo/btc',
         { ...values, value: Number(values.value) },
         {
@@ -60,6 +65,9 @@ export default function UpdatePage({
 
   return (
     <>
+      <Head>
+        <title>Crypo Index - Login</title>
+      </Head>
       <Link href="/">
         <a className="btn" style={{ position: 'absolute', top: 10, left: 10 }}>
           Voltar

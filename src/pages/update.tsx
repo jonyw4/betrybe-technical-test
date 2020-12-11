@@ -40,7 +40,7 @@ export default function UpdatePage({
   const onSubmit = async (values) => {
     setRequestError(null);
     try {
-      const { data } = await apiClient.post(
+      await apiClient.post(
         '/crypo/btc',
         { ...values, value: Number(values.value) },
         {

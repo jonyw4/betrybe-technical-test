@@ -11,7 +11,8 @@ class LoginEmailValidationHandler extends ValidationHandler<LoginRequestData> {
 
 class LoginPasswordValidationHandler extends ValidationHandler<LoginRequestData> {
   public async handle() {
-    return this.data.password.length >= 6;
+    const filter = new RegExp('^[0-9]{6,6}$');
+    return filter.test(this.data.password);
   }
 }
 

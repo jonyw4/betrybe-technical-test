@@ -38,11 +38,11 @@ export default function UpdatePage({
     errors,
     formState,
     watch
-  } = useForm<UpdatePageFormValues>();
+  } = useForm<UpdatePageFormValues>({ defaultValues: { currency: 'BRL' } });
   const { isSubmitting } = formState;
   const [requestError, setRequestError] = React.useState(null);
 
-  const onSubmit = async (values) => {
+  const onSubmit = async (values: UpdatePageFormValues) => {
     setRequestError(null);
     try {
       await apiClient.post<ApiUpdateBtcResponse>(

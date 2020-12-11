@@ -15,6 +15,7 @@ export function BtcRateInput({
         name={title}
         value={rate}
         onChange={onChange}
+        readOnly={onChange ? false : true}
         disabled={disabled}
         step={0.1}
       />

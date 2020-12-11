@@ -15,12 +15,17 @@ describe('components > BtcRateInput', () => {
     cy.get('.btc-rate__title').contains('Titulo');
     cy.get('.btc-rate__rate').should('be.disabled');
   });
-  it('should render a BtcRateInput and try exec onClick function correctly', () => {
-    const onClick = () => null;
-    cy.spy(onClick);
-    mount(<BtcRateInput rate={10} title="Titulo" onChange={onClick} />);
-    cy.get('.btc-rate__rate')
-      .type('5')
-      .should(() => expect(onClick).to.be.calledOnce);
+  it('should render a BtcRateInput and try exec onChange function correctly', () => {
+    mount(
+      <BtcRateInput
+        rate={10}
+        title="Titulo"
+        onChange={cy.stub().as('onChange')}
+      />
+    );
+    cy.get('.btc-rate__rate').type('5').type('{enter}');
+    cy.get('@onChange').should((stub) => {
+      expect(stub).to.have.been.called;
+    });
   });
 });

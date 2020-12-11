@@ -3,10 +3,10 @@ import type { NextApiResponse } from 'next';
 /**
  * Create a JSON response
  */
-export function jsonResponse(
+export function jsonResponse<T = any>(
   res: NextApiResponse,
   statusCode: number,
-  data: any
+  data: T
 ): void {
   res.statusCode = statusCode;
   res.setHeader('Content-Type', 'application/json');

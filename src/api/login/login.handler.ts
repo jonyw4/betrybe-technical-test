@@ -1,8 +1,14 @@
 import type { NextApiHandler } from 'next';
 import { LoginService } from './login.service';
 import { LoginValidator } from './login.validation';
+import { LoginResponseData } from './login.types';
 import { ValidationErrorResponse } from '../errors';
 import { jsonResponse, methodNotAllowedResponse } from '../utils';
+
+/**
+ * Default response for login request
+ */
+export type LoginHandlerResponse = LoginResponseData;
 
 export const loginHandler: NextApiHandler = async (req, res) => {
   if (req.method === 'POST') {
@@ -20,7 +26,7 @@ export const loginHandler: NextApiHandler = async (req, res) => {
 
     const token = new LoginService().login(data.email, data.password);
 
-    jsonResponse(res, 200, token);
+    jsonResponse<LoginHandlerResponse>(res, 200, token);
   } else {
     methodNotAllowedResponse(['POST'], req, res);
   }

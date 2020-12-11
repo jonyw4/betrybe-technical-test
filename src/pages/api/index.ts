@@ -1,1 +1,1 @@
-export { notFoundHandler as default } from '../../api/notFound.handler';
+export { notFoundHandler as default } from '../../api';

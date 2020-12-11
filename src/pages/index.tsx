@@ -1,31 +1,62 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { useApiClient } from '../utils';
-import { BtcRate } from '../components';
+import { BtcRateInput, Loading } from '../components';
+import { ApiGetBtcResponse } from '../api';
 
 export default function HomePage() {
-  const { data } = useApiClient('/crypo/btc');
+  const { data } = useApiClient<ApiGetBtcResponse>('/crypo/btc');
+  const [btcRate, setBtcRate] = React.useState(1);
+
+  function getBpiValue(currencyRate: number): number {
+    return Number(currencyRate * btcRate);
+  }
 
   if (!data) {
-    return <span>Carregando...</span>;
+    return <Loading />;
   }
-  // @ts-ignore
   const bpi = data.data.bpi;
   return (
     <div>
+      <h1>Crypo Index</h1>
+      <Link href="/login">
+        <a className="btn" style={{ position: 'absolute', top: 10, right: 10 }}>
+          Entrar
+        </a>
+      </Link>
       <div className="flex jc-center mb-2">
         <Link href="/update">
-          <a className="btn">Atualizar valor monetário</a>
+          <a className="btn btn--success">Atualizar valor monetário</a>
         </Link>
       </div>
       <div>
-        <BtcRate title={bpi.BTC.code} rate={bpi.BTC.rate} />
+        <BtcRateInput
+          title={bpi.BTC.code}
+          rate={btcRate}
+          onChange={(e) => setBtcRate(Number(e.target.value))}
+        />
       </div>
       <div className="flex">
-        <BtcRate title={bpi.BRL.code} rate={bpi.BRL.rate} />
-        <BtcRate title={bpi.CAD.code} rate={bpi.CAD.rate} />
-        <BtcRate title={bpi.EUR.code} rate={bpi.EUR.rate} />
-        <BtcRate title={bpi.USD.code} rate={bpi.USD.rate} />
+        <BtcRateInput
+          title={bpi.BRL.code}
+          rate={getBpiValue(bpi.BRL.rate_float)}
+          disabled
+        />
+        <BtcRateInput
+          title={bpi.CAD.code}
+          rate={getBpiValue(bpi.CAD.rate_float)}
+          disabled
+        />
+        <BtcRateInput
+          title={bpi.EUR.code}
+          rate={getBpiValue(bpi.EUR.rate_float)}
+          disabled
+        />
+        <BtcRateInput
+          title={bpi.USD.code}
+          rate={getBpiValue(bpi.USD.rate_float)}
+          disabled
+        />
       </div>
     </div>
   );

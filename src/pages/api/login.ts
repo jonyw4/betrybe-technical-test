@@ -1,1 +1,1 @@
-export { loginHandler as default } from '../../api/login';
+export { loginHandler as default } from '../../api';

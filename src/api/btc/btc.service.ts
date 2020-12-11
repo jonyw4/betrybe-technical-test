@@ -5,7 +5,8 @@ import { CurrenciesService } from './currencies.service';
 type LocalBPI = { [key in Currencies]: BPI };
 type AllBPI = GetCurrentPriceBTCResponse['bpi'] & LocalBPI;
 
-interface BtcServiceGetCurrentPriceResponse extends GetCurrentPriceBTCResponse {
+export interface BtcServiceGetCurrentPriceResponse
+  extends GetCurrentPriceBTCResponse {
   bpi: AllBPI;
 }
 

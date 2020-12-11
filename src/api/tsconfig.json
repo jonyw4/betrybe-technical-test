@@ -1,0 +1,7 @@
+// Remove cypress types
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types": ["jest"]
+  }
+}

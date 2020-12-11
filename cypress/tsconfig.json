@@ -1,9 +1,0 @@
-// Add types for cypress. (Globally we are using types from jest. so just in this folder we use cypress)
-{
-  "extends": "../tsconfig.json",
-  "compilerOptions": {
-    "types": [
-      "cypress"
-    ]
-  }
-}

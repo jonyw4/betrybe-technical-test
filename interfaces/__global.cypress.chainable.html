@@ -95,7 +95,9 @@
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="__global.cypress.chainable.html#intercept" class="tsd-kind-icon">intercept</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="__global.cypress.chainable.html#route2" class="tsd-kind-icon">route2</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="__global.cypress.chainable.html#wait" class="tsd-kind-icon">wait</a></li>
 							</ul>
 						</section>
 					</div>
@@ -104,39 +106,37 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-					<a name="route2" class="tsd-anchor"></a>
-					<h3>route2</h3>
+					<a name="intercept" class="tsd-anchor"></a>
+					<h3>intercept</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">route2<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><a href="../globals.html#routematcher" class="tsd-signature-type">RouteMatcher</a>, response<span class="tsd-signature-symbol">?: </span><a href="../globals.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="__global.cypress.chainable.html" class="tsd-signature-type">Chainable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">&gt;</span></li>
-						<li class="tsd-signature tsd-kind-icon">route2<span class="tsd-signature-symbol">(</span>method<span class="tsd-signature-symbol">: </span><a href="../globals.html#method" class="tsd-signature-type">Method</a>, url<span class="tsd-signature-symbol">: </span><a href="../globals.html#routematcher" class="tsd-signature-type">RouteMatcher</a>, response<span class="tsd-signature-symbol">?: </span><a href="../globals.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="__global.cypress.chainable.html" class="tsd-signature-type">Chainable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">intercept<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><a href="../globals.html#routematcher" class="tsd-signature-type">RouteMatcher</a>, response<span class="tsd-signature-symbol">?: </span><a href="../globals.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="__global.cypress.chainable.html" class="tsd-signature-type">Chainable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">intercept<span class="tsd-signature-symbol">(</span>method<span class="tsd-signature-symbol">: </span><a href="../globals.html#method" class="tsd-signature-type">Method</a>, url<span class="tsd-signature-symbol">: </span><a href="../globals.html#routematcher" class="tsd-signature-type">RouteMatcher</a>, response<span class="tsd-signature-symbol">?: </span><a href="../globals.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="__global.cypress.chainable.html" class="tsd-signature-type">Chainable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in node_modules/cypress/types/net-stubbing.ts:354</li>
+									<li>Defined in node_modules/cypress/types/net-stubbing.ts:381</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Use <code>cy.route2()</code> to stub and intercept HTTP requests and responses.</p>
+									<p>Use <code>cy.intercept()</code> to stub and intercept HTTP requests and responses.</p>
 								</div>
-								<p>Note: this command is only available if you have set the <code>experimentalNetworkStubbing</code>
-								configuration option to <code>true</code>.</p>
 								<dl class="tsd-comment-tags">
 									<dt>see</dt>
-									<dd><p><a href="https://on.cypress.io/route2">https://on.cypress.io/route2</a></p>
+									<dd><p><a href="https://on.cypress.io/intercept">https://on.cypress.io/intercept</a></p>
 									</dd>
 									<dt>example</dt>
-									<dd><p>   cy.route2(&#39;<a href="https://localhost:7777/users&#39;">https://localhost:7777/users&#39;</a>, [{id: 1, name: &#39;Pat&#39;}])</p>
+									<dd><p>   cy.intercept(&#39;<a href="https://localhost:7777/users&#39;">https://localhost:7777/users&#39;</a>, [{id: 1, name: &#39;Pat&#39;}])</p>
 									</dd>
 									<dt>example</dt>
-									<dd><p>   cy.route2(&#39;<a href="https://localhost:7777/protected-endpoint&#39;">https://localhost:7777/protected-endpoint&#39;</a>, (req) =&gt; {
+									<dd><p>   cy.intercept(&#39;<a href="https://localhost:7777/protected-endpoint&#39;">https://localhost:7777/protected-endpoint&#39;</a>, (req) =&gt; {
 											req.headers[&#39;authorization&#39;] = &#39;basic fooabc123&#39;
 										})</p>
 									</dd>
 									<dt>example</dt>
-									<dd><p>   cy.route2(&#39;<a href="https://localhost:7777/some-response&#39;">https://localhost:7777/some-response&#39;</a>, (req) =&gt; {
+									<dd><p>   cy.intercept(&#39;<a href="https://localhost:7777/some-response&#39;">https://localhost:7777/some-response&#39;</a>, (req) =&gt; {
 											req.reply(res =&gt; {
 											res.body = &#39;some new body&#39;
 											})
@@ -158,21 +158,19 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in node_modules/cypress/types/net-stubbing.ts:365</li>
+									<li>Defined in node_modules/cypress/types/net-stubbing.ts:389</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Use <code>cy.route2()</code> to stub and intercept HTTP requests and responses.</p>
+									<p>Use <code>cy.intercept()</code> to stub and intercept HTTP requests and responses.</p>
 								</div>
-								<p>Note: this command is only available if you have set the <code>experimentalNetworkStubbing</code>
-								configuration option to <code>true</code>.</p>
 								<dl class="tsd-comment-tags">
 									<dt>see</dt>
-									<dd><p><a href="https://on.cypress.io/route2">https://on.cypress.io/route2</a></p>
+									<dd><p><a href="https://on.cypress.io/intercept">https://on.cypress.io/intercept</a></p>
 									</dd>
 									<dt>example</dt>
-									<dd><p>   cy.route2(&#39;GET&#39;, &#39;<a href="http://foo.com/fruits&#39;">http://foo.com/fruits&#39;</a>, [&#39;apple&#39;, &#39;banana&#39;, &#39;cherry&#39;])</p>
+									<dd><p>   cy.intercept(&#39;GET&#39;, &#39;<a href="http://foo.com/fruits&#39;">http://foo.com/fruits&#39;</a>, [&#39;apple&#39;, &#39;banana&#39;, &#39;cherry&#39;])</p>
 									</dd>
 								</dl>
 							</div>
@@ -189,6 +187,143 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="__global.cypress.chainable.html" class="tsd-signature-type">Chainable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+					<a name="route2" class="tsd-anchor"></a>
+					<h3>route2</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">route2<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><a href="../globals.html#routematcher" class="tsd-signature-type">RouteMatcher</a>, response<span class="tsd-signature-symbol">?: </span><a href="../globals.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="__global.cypress.chainable.html" class="tsd-signature-type">Chainable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">route2<span class="tsd-signature-symbol">(</span>method<span class="tsd-signature-symbol">: </span><a href="../globals.html#method" class="tsd-signature-type">Method</a>, url<span class="tsd-signature-symbol">: </span><a href="../globals.html#routematcher" class="tsd-signature-type">RouteMatcher</a>, response<span class="tsd-signature-symbol">?: </span><a href="../globals.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="__global.cypress.chainable.html" class="tsd-signature-type">Chainable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in node_modules/cypress/types/net-stubbing.ts:393</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use <code>cy.intercept()</code> instead.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <a href="../globals.html#routematcher" class="tsd-signature-type">RouteMatcher</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> response: <a href="../globals.html#routehandler" class="tsd-signature-type">RouteHandler</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="__global.cypress.chainable.html" class="tsd-signature-type">Chainable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in node_modules/cypress/types/net-stubbing.ts:397</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use <code>cy.intercept()</code> instead.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>method: <a href="../globals.html#method" class="tsd-signature-type">Method</a></h5>
+								</li>
+								<li>
+									<h5>url: <a href="../globals.html#routematcher" class="tsd-signature-type">RouteMatcher</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> response: <a href="../globals.html#routehandler" class="tsd-signature-type">RouteHandler</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="__global.cypress.chainable.html" class="tsd-signature-type">Chainable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+					<a name="wait" class="tsd-anchor"></a>
+					<h3>wait</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">wait<span class="tsd-signature-symbol">(</span>alias<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="waitoptions.html" class="tsd-signature-type">WaitOptions</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="__global.cypress.chainable.html" class="tsd-signature-type">Chainable</a><span class="tsd-signature-symbol">&lt;</span><a href="interception.html" class="tsd-signature-type">Interception</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">wait<span class="tsd-signature-symbol">(</span>alias<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="waitoptions.html" class="tsd-signature-type">WaitOptions</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="__global.cypress.chainable.html" class="tsd-signature-type">Chainable</a><span class="tsd-signature-symbol">&lt;</span><a href="interception.html" class="tsd-signature-type">Interception</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in node_modules/cypress/types/net-stubbing.ts:416</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Wait for a specific request to complete.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="https://on.cypress.io/wait">https://on.cypress.io/wait</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>alias: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Name of the alias to wait for.</p>
+										<pre><code><span class="hljs-comment">// Wait for the route aliased as &#x27;getAccount&#x27; to respond</span>
+<span class="hljs-comment">// without changing or stubbing its response</span>
+<span class="hljs-selector-tag">cy</span><span class="hljs-selector-class">.intercept</span>(<span class="hljs-string">&#x27;https://api.example.com/accounts/*&#x27;</span>)<span class="hljs-selector-class">.as</span>(<span class="hljs-string">&#x27;getAccount&#x27;</span>)
+<span class="hljs-selector-tag">cy</span><span class="hljs-selector-class">.visit</span>(<span class="hljs-string">&#x27;/accounts/123&#x27;</span>)
+<span class="hljs-selector-tag">cy</span><span class="hljs-selector-class">.wait</span>(<span class="hljs-string">&#x27;@getAccount&#x27;</span>)<span class="hljs-selector-class">.then</span>((interception) =&gt; {
+<span class="hljs-comment">// we can now access the low level request</span>
+<span class="hljs-comment">// that contains the request body,</span>
+<span class="hljs-comment">// response body, status, etc</span>
+})</code></pre>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="waitoptions.html" class="tsd-signature-type">WaitOptions</a><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="__global.cypress.chainable.html" class="tsd-signature-type">Chainable</a><span class="tsd-signature-symbol">&lt;</span><a href="interception.html" class="tsd-signature-type">Interception</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in node_modules/cypress/types/net-stubbing.ts:436</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Wait for list of requests to complete.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="https://on.cypress.io/wait">https://on.cypress.io/wait</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>alias: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="waitoptions.html" class="tsd-signature-type">WaitOptions</a><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="__global.cypress.chainable.html" class="tsd-signature-type">Chainable</a><span class="tsd-signature-symbol">&lt;</span><a href="interception.html" class="tsd-signature-type">Interception</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -222,7 +357,13 @@
 						<a href="__global.cypress.chainable.html" class="tsd-kind-icon">Chainable</a>
 						<ul>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+								<a href="__global.cypress.chainable.html#intercept" class="tsd-kind-icon">intercept</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
 								<a href="__global.cypress.chainable.html#route2" class="tsd-kind-icon">route2</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+								<a href="__global.cypress.chainable.html#wait" class="tsd-kind-icon">wait</a>
 							</li>
 						</ul>
 					</li>

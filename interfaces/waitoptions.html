@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BtcServiceGetCurrentPriceResponse | betrybe-technical-test</title>
+	<title>WaitOptions | betrybe-technical-test</title>
 	<meta name="description" content="Documentation for betrybe-technical-test">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="btcservicegetcurrentpriceresponse.html">BtcServiceGetCurrentPriceResponse</a>
+					<a href="waitoptions.html">WaitOptions</a>
 				</li>
 			</ul>
-			<h1>Interface BtcServiceGetCurrentPriceResponse</h1>
+			<h1>Interface WaitOptions</h1>
 		</div>
 	</div>
 </header>
@@ -70,12 +70,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="getcurrentpricebtcresponse.html" class="tsd-signature-type">GetCurrentPriceBTCResponse</a>
-						<ul class="tsd-hierarchy">
-							<li>
-								<span class="target">BtcServiceGetCurrentPriceResponse</span>
-							</li>
-						</ul>
+						<span class="target">WaitOptions</span>
 					</li>
 				</ul>
 			</section>
@@ -83,64 +78,107 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="btcservicegetcurrentpriceresponse.html#bpi" class="tsd-kind-icon">bpi</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="btcservicegetcurrentpriceresponse.html#disclaimer" class="tsd-kind-icon">disclaimer</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="btcservicegetcurrentpriceresponse.html#time" class="tsd-kind-icon">time</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="waitoptions.html#log" class="tsd-kind-icon">log</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="waitoptions.html#requesttimeout" class="tsd-kind-icon">request<wbr>Timeout</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="waitoptions.html#responsetimeout" class="tsd-kind-icon">response<wbr>Timeout</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="waitoptions.html#timeout" class="tsd-kind-icon">timeout</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
-					<a name="bpi" class="tsd-anchor"></a>
-					<h3>bpi</h3>
-					<div class="tsd-signature tsd-kind-icon">bpi<span class="tsd-signature-symbol">:</span> <a href="../globals.html#allbpi" class="tsd-signature-type">AllBPI</a></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="log" class="tsd-anchor"></a>
+					<h3>log</h3>
+					<div class="tsd-signature tsd-kind-icon">log<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
-						<p>Overrides <a href="getcurrentpricebtcresponse.html">GetCurrentPriceBTCResponse</a>.<a href="getcurrentpricebtcresponse.html#bpi">bpi</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/fba6ba7/src/api/btc/btc.service.ts#L10">src/api/btc/btc.service.ts:10</a></li>
+							<li>Defined in node_modules/cypress/types/net-stubbing.ts:337</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Displays the command in the Command Log</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>true</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="disclaimer" class="tsd-anchor"></a>
-					<h3>disclaimer</h3>
-					<div class="tsd-signature tsd-kind-icon">disclaimer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="requesttimeout" class="tsd-anchor"></a>
+					<h3>request<wbr>Timeout</h3>
+					<div class="tsd-signature tsd-kind-icon">request<wbr>Timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="getcurrentpricebtcresponse.html">GetCurrentPriceBTCResponse</a>.<a href="getcurrentpricebtcresponse.html#disclaimer">disclaimer</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/fba6ba7/src/api/utils/coindesk.service.ts#L16">src/api/utils/coindesk.service.ts:16</a></li>
+							<li>Defined in node_modules/cypress/types/net-stubbing.ts:344</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Time to wait for the request (ms)</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>{@link Timeoutable#timeout}</p>
+							</dd>
+							<dt>see</dt>
+							<dd><p><a href="https://on.cypress.io/configuration#Timeouts">https://on.cypress.io/configuration#Timeouts</a></p>
+							</dd>
+						</dl>
+					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="time" class="tsd-anchor"></a>
-					<h3>time</h3>
-					<div class="tsd-signature tsd-kind-icon">time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>updated<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>updatedISO<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>updateduk<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="responsetimeout" class="tsd-anchor"></a>
+					<h3>response<wbr>Timeout</h3>
+					<div class="tsd-signature tsd-kind-icon">response<wbr>Timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="getcurrentpricebtcresponse.html">GetCurrentPriceBTCResponse</a>.<a href="getcurrentpricebtcresponse.html#time">time</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/jonyw4/betrybe-technical-test/blob/fba6ba7/src/api/utils/coindesk.service.ts#L11">src/api/utils/coindesk.service.ts:11</a></li>
+							<li>Defined in node_modules/cypress/types/net-stubbing.ts:351</li>
 						</ul>
 					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter">
-								<h5>updated<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5>updatedISO<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5>updateduk<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Time to wait for the response (ms)</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>{@link Timeoutable#timeout}</p>
+							</dd>
+							<dt>see</dt>
+							<dd><p><a href="https://on.cypress.io/configuration#Timeouts">https://on.cypress.io/configuration#Timeouts</a></p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="timeout" class="tsd-anchor"></a>
+					<h3>timeout</h3>
+					<div class="tsd-signature tsd-kind-icon">timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in node_modules/cypress/types/net-stubbing.ts:358</li>
 						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Time to wait (ms)</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>defaultCommandTimeout</p>
+							</dd>
+							<dt>see</dt>
+							<dd><p><a href="https://on.cypress.io/configuration#Timeouts">https://on.cypress.io/configuration#Timeouts</a></p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 			</section>
@@ -157,17 +195,20 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface">
-						<a href="btcservicegetcurrentpriceresponse.html" class="tsd-kind-icon">Btc<wbr>Service<wbr>Get<wbr>Current<wbr>Price<wbr>Response</a>
+					<li class="current tsd-kind-interface tsd-is-external">
+						<a href="waitoptions.html" class="tsd-kind-icon">Wait<wbr>Options</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
-								<a href="btcservicegetcurrentpriceresponse.html#bpi" class="tsd-kind-icon">bpi</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+								<a href="waitoptions.html#log" class="tsd-kind-icon">log</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="btcservicegetcurrentpriceresponse.html#disclaimer" class="tsd-kind-icon">disclaimer</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+								<a href="waitoptions.html#requesttimeout" class="tsd-kind-icon">request<wbr>Timeout</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="btcservicegetcurrentpriceresponse.html#time" class="tsd-kind-icon">time</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+								<a href="waitoptions.html#responsetimeout" class="tsd-kind-icon">response<wbr>Timeout</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+								<a href="waitoptions.html#timeout" class="tsd-kind-icon">timeout</a>
 							</li>
 						</ul>
 					</li>

@@ -1,4 +1,4 @@
 export * from './FormInputError';
-export * from './BtcRate';
+export * from './BtcRateInput';
 export * from './Alert';
 export * from './Loading';

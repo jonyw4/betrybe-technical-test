@@ -1,1 +1,1 @@
-export { btcHandler as default } from '../../../api/btc';
+export { btcHandler as default } from '../../../api';

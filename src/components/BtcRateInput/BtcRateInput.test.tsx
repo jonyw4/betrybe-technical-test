@@ -13,7 +13,7 @@ describe('components > BtcRateInput', () => {
     mount(<BtcRateInput rate={10} title="Titulo" disabled />);
     cy.get('.btc-rate').should('be.visible');
     cy.get('.btc-rate__title').contains('Titulo');
-    cy.get('.btc-rate__rate').should('have.a.property', 'disabled');
+    cy.get('.btc-rate__rate').should('be.disabled');
   });
   it('should render a BtcRateInput and try exec onClick function correctly', () => {
     const onClick = () => null;

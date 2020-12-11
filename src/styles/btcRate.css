@@ -5,9 +5,7 @@
   justify-content: center;
 }
 .btc-rate__rate {
-  border: 0;
   padding: 10px;
-  background-color: #c4c4c4;
   display: block;
   margin-top: 5px;
   width: 150px;

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { AxiosError } from 'axios';
 import Router from 'next/router';
 import { useForm } from 'react-hook-form';
@@ -31,6 +32,11 @@ export default function LoginPage() {
       <Head>
         <title>Crypo Index - Login</title>
       </Head>
+      <Link href="/">
+        <a className="btn" style={{ position: 'absolute', top: 10, right: 10 }}>
+          Home
+        </a>
+      </Link>
       <form onSubmit={handleSubmit(onSubmit)}>
         {requestError && <Alert type="warning">{requestError}</Alert>}
 

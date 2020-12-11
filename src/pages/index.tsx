@@ -18,9 +18,15 @@ export default function HomePage() {
   const bpi = data.data.bpi;
   return (
     <div>
+      <h1>Crypo Index</h1>
+      <Link href="/login">
+        <a className="btn" style={{ position: 'absolute', top: 10, right: 10 }}>
+          Entrar
+        </a>
+      </Link>
       <div className="flex jc-center mb-2">
         <Link href="/update">
-          <a className="btn">Atualizar valor monetário</a>
+          <a className="btn btn--success">Atualizar valor monetário</a>
         </Link>
       </div>
       <div>

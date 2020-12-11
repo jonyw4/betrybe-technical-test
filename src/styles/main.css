@@ -14,10 +14,19 @@ input[type="submit"]{
   cursor: pointer;
   margin-top: 10px;
 }
+input:disabled{
+  background-color: rgb(226, 226, 226);
+  color: rgb(105, 105, 105);
+}
+
 a {
   text-decoration: none;
 }
 label{
   display: block;
   margin-bottom: 10px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
 }

@@ -118,12 +118,12 @@
 					<div class="tsd-signature tsd-kind-icon">auth<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">; </span>username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/cypress/types/net-stubbing.ts:135</li>
+							<li>Defined in node_modules/cypress/types/net-stubbing.ts:237</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Match HTTP basic authentication.</p>
+							<p>Match against the username and password used in HTTP Basic authentication.</p>
 						</div>
 					</div>
 					<div class="tsd-type-declaration">
@@ -144,12 +144,12 @@
 					<div class="tsd-signature tsd-kind-icon">headers<span class="tsd-signature-symbol">:</span> <a href="dictmatcher.html" class="tsd-signature-type">DictMatcher</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/cypress/types/net-stubbing.ts:139</li>
+							<li>Defined in node_modules/cypress/types/net-stubbing.ts:241</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Match client request headers.</p>
+							<p>Match against HTTP headers on the request.</p>
 						</div>
 					</div>
 				</section>
@@ -159,12 +159,12 @@
 					<div class="tsd-signature tsd-kind-icon">hostname<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">S</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/cypress/types/net-stubbing.ts:143</li>
+							<li>Defined in node_modules/cypress/types/net-stubbing.ts:245</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Match based on requested hostname.</p>
+							<p>Match against the requested HTTP hostname.</p>
 						</div>
 					</div>
 				</section>
@@ -174,12 +174,13 @@
 					<div class="tsd-signature tsd-kind-icon">https<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/cypress/types/net-stubbing.ts:147</li>
+							<li>Defined in node_modules/cypress/types/net-stubbing.ts:250</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Match requests served via HTTPS only.</p>
+							<p>If &#39;true&#39;, only HTTPS requests will be matched.
+							If &#39;false&#39;, only HTTP requests will be matched.</p>
 						</div>
 					</div>
 				</section>
@@ -189,13 +190,16 @@
 					<div class="tsd-signature tsd-kind-icon">method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">S</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/cypress/types/net-stubbing.ts:151</li>
+							<li>Defined in node_modules/cypress/types/net-stubbing.ts:255</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Match against the request&#39;s HTTP method.</p>
+						</div>
 						<dl class="tsd-comment-tags">
 							<dt>default</dt>
-							<dd><p>&#39;GET&#39;</p>
+							<dd><p>&#39;*&#39;</p>
 							</dd>
 						</dl>
 					</div>
@@ -206,7 +210,7 @@
 					<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">S</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/cypress/types/net-stubbing.ts:155</li>
+							<li>Defined in node_modules/cypress/types/net-stubbing.ts:259</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -221,7 +225,7 @@
 					<div class="tsd-signature tsd-kind-icon">pathname<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">S</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/cypress/types/net-stubbing.ts:159</li>
+							<li>Defined in node_modules/cypress/types/net-stubbing.ts:263</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -236,12 +240,13 @@
 					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <a href="../globals.html#numbermatcher" class="tsd-signature-type">NumberMatcher</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/cypress/types/net-stubbing.ts:163</li>
+							<li>Defined in node_modules/cypress/types/net-stubbing.ts:268</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Match based on requested port.</p>
+							<p>Match based on requested port, or pass an array of ports
+							to match against any in that array.</p>
 						</div>
 					</div>
 				</section>
@@ -251,7 +256,7 @@
 					<div class="tsd-signature tsd-kind-icon">query<span class="tsd-signature-symbol">:</span> <a href="dictmatcher.html" class="tsd-signature-type">DictMatcher</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/cypress/types/net-stubbing.ts:167</li>
+							<li>Defined in node_modules/cypress/types/net-stubbing.ts:272</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -267,7 +272,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="routematchercompatoptions.html">RouteMatcherCompatOptions</a>.<a href="routematchercompatoptions.html#response">response</a></p>
 						<ul>
-							<li>Defined in node_modules/cypress/types/net-stubbing.ts:126</li>
+							<li>Defined in node_modules/cypress/types/net-stubbing.ts:228</li>
 						</ul>
 					</aside>
 				</section>
@@ -277,12 +282,14 @@
 					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">S</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/cypress/types/net-stubbing.ts:171</li>
+							<li>Defined in node_modules/cypress/types/net-stubbing.ts:278</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Match based on full request URL.</p>
+							<p>Match against the full request URL.
+								If a string is passed, it will be used as a substring match,
+							not an equality match.</p>
 						</div>
 					</div>
 				</section>

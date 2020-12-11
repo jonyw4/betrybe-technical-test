@@ -111,12 +111,12 @@
 					<div class="tsd-signature tsd-kind-icon">body<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Body</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/cypress/types/net-stubbing.ts:196</li>
+							<li>Defined in node_modules/cypress/types/net-stubbing.ts:303</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>If set, serve a static string/JSON object as the response body.</p>
+							<p>Serve a static string/JSON object as the response body.</p>
 						</div>
 					</div>
 				</section>
@@ -126,12 +126,12 @@
 					<div class="tsd-signature tsd-kind-icon">fixture<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Fixture</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/cypress/types/net-stubbing.ts:192</li>
+							<li>Defined in node_modules/cypress/types/net-stubbing.ts:299</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>If set, serve a fixture as the response body.</p>
+							<p>Serve a fixture as the response body.</p>
 						</div>
 					</div>
 				</section>
@@ -141,12 +141,14 @@
 					<div class="tsd-signature tsd-kind-icon">force<wbr>Network<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/cypress/types/net-stubbing.ts:208</li>
+							<li>Defined in node_modules/cypress/types/net-stubbing.ts:319</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>If <code>forceNetworkError</code> is truthy, Cypress will destroy the connection to the browser and send no response. Useful for simulating a server that is not reachable. Must not be set in combination with other options.</p>
+							<p>If &#39;forceNetworkError&#39; is truthy, Cypress will destroy the browser connection
+								and send no response. Useful for simulating a server that is not reachable.
+							Must not be set in combination with other options.</p>
 						</div>
 					</div>
 				</section>
@@ -156,10 +158,13 @@
 					<div class="tsd-signature tsd-kind-icon">headers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/cypress/types/net-stubbing.ts:200</li>
+							<li>Defined in node_modules/cypress/types/net-stubbing.ts:308</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>HTTP headers to accompany the response.</p>
+						</div>
 						<dl class="tsd-comment-tags">
 							<dt>default</dt>
 							<dd><p>{}</p>
@@ -181,10 +186,13 @@
 					<div class="tsd-signature tsd-kind-icon">status<wbr>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/cypress/types/net-stubbing.ts:204</li>
+							<li>Defined in node_modules/cypress/types/net-stubbing.ts:313</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The HTTP status code to send.</p>
+						</div>
 						<dl class="tsd-comment-tags">
 							<dt>default</dt>
 							<dd><p>200</p>
@@ -198,12 +206,12 @@
 					<div class="tsd-signature tsd-kind-icon">throttle<wbr>Kbps<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/cypress/types/net-stubbing.ts:212</li>
+							<li>Defined in node_modules/cypress/types/net-stubbing.ts:323</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>If set, the <code>body</code> will be sent at <code>throttleKbps</code> kbps.</p>
+							<p>Kilobits per second to send &#39;body&#39;.</p>
 						</div>
 					</div>
 				</section>
